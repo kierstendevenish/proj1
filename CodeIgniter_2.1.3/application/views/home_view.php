@@ -4,11 +4,6 @@
  <body>
    <h2>Welcome <?php echo $username; ?>!</h2><br>
    <br>
-   <?php echo form_open('findUser'); ?>
-        <label for="findUsername">Find a User:</label>
-        <input type="text" size="20" id="findUsername" name="findUsername"/>
-        <br/>
-   </form><br/><br/>
    <?php if ($connected == false) echo "<a href='driver/foursquareAuth' target='_blank'>Connect with Foursquare</a><br>"; ?>
    <br>
    <table border="1" rules="all">

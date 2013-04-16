@@ -241,5 +241,24 @@ Class User extends CI_Model
             $db->query("UPDATE appDataString SET dataValue='" . $deliveryAddr . "' WHERE dataKey='deliveryAddr';");
             $db->query("UPDATE appDataString SET dataValue='" . $pickupTime . "' WHERE dataKey='pickupTime';");
         }
+
+        function getAllUsers()
+        {
+            $db = new PDO('sqlite:./application/db/deliveryDrivers');
+            $result = $db->query("SELECT username FROM Users;");
+
+            if(count($result) == 1)
+                {
+                    $users = array();
+                    foreach ($result as $row)
+                    {
+                        array_append($users, $row['username']);
+                    }
+
+                    return $users;
+                }
+
+                return '';
+        }
 }
 ?>

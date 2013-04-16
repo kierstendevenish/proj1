@@ -9,9 +9,12 @@ class Login extends CI_Controller {
 
 	function index()
 	{
-		$this->load->helper(array('form'));
+		$this->load->model('user');
+                $data['users'] = $this->user->getAllUsers();
+
+                $this->load->helper(array('form'));
                 $this->load->view('templates/header');
-		$this->load->view('login_view');
+		$this->load->view('login_view', $data);
                 $this->load->view('templates/footer');
 	}
 
