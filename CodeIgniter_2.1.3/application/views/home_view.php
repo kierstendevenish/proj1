@@ -8,9 +8,11 @@
    <br>
    <table border="1" rules="all">
     <tr><th>Venue</th><th>Location</th><th>Created At</th></tr>
-    <?php foreach ($checkins as $c):
+    <?php if ($checkins != null):
+            foreach ($checkins as $c):
                 echo "<tr><td>".$c['venue']."</td><td>".$c['location']."</td><td>".$c['createdAt']."</td></tr>";
-            endforeach; ?>
+            endforeach;
+            endif; ?>
    </table>
    
    <br><a href="home/logout">Logout</a>
