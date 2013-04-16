@@ -49,7 +49,7 @@ Class User extends CI_Model
                 $db = new PDO('sqlite:./application/db/deliveryDrivers');
                 $query = "INSERT INTO Users (username, password, fsAccessToken, fsId) VALUES ('" . $username . "','" . $password . "','','');";
                 $result = $db->query($query);
-                var_dump($query);
+                //var_dump($query);
         }
         
         function getALlEsls()
