@@ -3,10 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <body>
    <h2>Welcome <?php echo $username; ?>!</h2><br>
-   You last checked in at: <?php echo $lat . ", " . $long; ?><br><br>
+   <br>
+   <?php echo form_open('findUser'); ?>
+        <label for="findUsername">Find a User:</label>
+        <input type="text" size="20" id="findUsername" name="findUsername"/>
+        <br/>
+   </form><br/><br/>
    <a href='driver/foursquareAuth' target='_blank'>Connect with Foursquare</a><br>
-   <a href='driver/listEsls'>View Esls</a><br>
-   <a href='driver/listBids'>Bid History</a><br>
+   <br>
+   <table>
+    <th><td>Venue></td><td>Location</td><td>Created At</td></th>
+   </table>
    
    <br><a href="home/logout">Logout</a>
  </body>
