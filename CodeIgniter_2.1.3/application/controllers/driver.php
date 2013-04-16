@@ -127,7 +127,7 @@ log_message("info", $username);
             $this->load->model('user');
             $token = $this->user->getFoursquareToken($username);
 
-            if ($token == null or $token == '')
+            if ($token != null or $token != '')
             {
                 $url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=".$token."&limit=10&sort=newestfirst";
                 $json = file_get_contents($url);
