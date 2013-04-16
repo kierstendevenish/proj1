@@ -39,7 +39,7 @@ class Driver extends CI_Controller {
 
         function foursquareAuth()
         {
-            redirect('https://foursquare.com/oauth2/authenticate?client_id=Y4XZ44AUGUG031Q0A0Y0LVYIJA2IFU4XMAYZ4QGTJIOSL2I3&response_type=code&redirect_uri=https://students.cs.byu.edu/~kdevenis/CS462-driver/drivers/CodeIgniter_2.1.3/index.php/driver/code');
+            redirect('https://foursquare.com/oauth2/authenticate?client_id=Y4XZ44AUGUG031Q0A0Y0LVYIJA2IFU4XMAYZ4QGTJIOSL2I3&response_type=code&redirect_uri=https://students.cs.byu.edu/~kdevenis/proj1/proj1/CodeIgniter_2.1.3/index.php/driver/code');
 
             /*$fields_str = "client_id=Y4XZ44AUGUG031Q0A0Y0LVYIJA2IFU4XMAYZ4QGTJIOSL2I3&return_type=code&redirect_uri=https://students.cs.byu.edu/~kdevenis/proj1/proj1/CodeIgniter_2.1.3/index.php/driver/code";
                 $ch = curl_init();
