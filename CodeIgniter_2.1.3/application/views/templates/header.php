@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Delivery Drivers</title>
+	<title>Project 1</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()."application/css/style.css"; ?>">
         <!-- <style> @import url('<?=base_url()?>/application/css/styles.css'); </style> -->
 </head>
@@ -11,5 +11,5 @@
         </ul>
     </div>
     <div id="body">
-        <title>Delivery Drivers</title>
-        <br><h1>Delivery Drivers</h1><br>
+        <title>Project 1</title>
+        <br><h1>Project 1</h1><br>

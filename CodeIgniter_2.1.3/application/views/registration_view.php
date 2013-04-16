@@ -13,15 +13,6 @@
      <label for="password">Password:</label>
      <input type="password" size="20" id="password" name="password"/>
      <br/>
-    <label for="name">Name:</label>
-     <input type="text" size="25" id="name" name="name"/>
-     <br/>
-     <label for="phone">Phone Number (for SMS):</label>
-     <input type="text" size="11" id="phone" name="phone"/>
-     <br/>
-     <label for="rate">Rate:</label>
-     <input type="text" size="6" id="rate" name="rate"/>
-     <br/>
      <input type="submit" value="Register"/>
     </form><br><br>
  </body>
