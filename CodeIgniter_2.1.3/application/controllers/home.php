@@ -20,7 +20,7 @@ class Home extends CI_Controller {
 
      $token = $this->user->getFoursquareToken($data['username']);
      var_dump($token)
-     if ($token == '' or $token == NULL)
+     if(($token == '') or ($token == NULL))
      {
         $data['connected'] = false;
      }
