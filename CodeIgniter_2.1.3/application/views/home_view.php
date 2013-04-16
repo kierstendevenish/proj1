@@ -9,7 +9,7 @@
         <input type="text" size="20" id="findUsername" name="findUsername"/>
         <br/>
    </form><br/><br/>
-   <a href='driver/foursquareAuth' target='_blank'>Connect with Foursquare</a><br>
+   <?php if ($connected == false) echo "<a href='driver/foursquareAuth' target='_blank'>Connect with Foursquare</a><br>"; ?>
    <br>
    <table>
     <th><td>Venue></td><td>Location</td><td>Created At</td></th>

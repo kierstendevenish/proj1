@@ -17,6 +17,16 @@ class Home extends CI_Controller {
      //$location = $this->user->getLocation($data['username']);
      //$data['lat'] = $location['lat'];
      //$data['long'] = $location['long'];
+
+     $token = $this->user->getFoursquareToken($data['username']);
+     if ($token == '' OR $token == NULL)
+     {
+        $data['connected'] = false;
+     }
+     else
+     {
+        $data['connected'] = true;
+     }
      
         $this->load->view('templates/header');
         $this->load->view('home_view', $data);
