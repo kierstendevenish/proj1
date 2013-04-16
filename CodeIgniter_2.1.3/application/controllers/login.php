@@ -10,12 +10,7 @@ class Login extends CI_Controller {
 	function index()
 	{
 		$this->load->model('user');
-                $users = $this->user->getAllUsers();
-                $data['users'] = array();
-                foreach ($users as $u)
-                {
-                    array_push($data['users'], $u);
-                }
+                $data['users'] = array();//$this->user->getAllUsers();
 
                 $this->load->helper(array('form'));
                 $this->load->view('templates/header');
