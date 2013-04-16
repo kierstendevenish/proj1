@@ -1,0 +1,1 @@
+<?php echo $user." last checked in at ".$venue."."; ?>
