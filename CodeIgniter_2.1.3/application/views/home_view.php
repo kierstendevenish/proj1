@@ -15,7 +15,7 @@
     <th><td>Venue</td><td>Location</td><td>Created At</td></th>
     <?php foreach ($checkins as $c):
                 echo "<tr><td>".$c['venue']."</td><td>".$c['location']."</td><td>".$c['createdAt']."</td></tr>";
-            end foreach; ?>
+            endforeach; ?>
    </table>
    
    <br><a href="home/logout">Logout</a>
