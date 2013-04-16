@@ -252,7 +252,7 @@ Class User extends CI_Model
                     $users = array();
                     foreach ($result as $row)
                     {
-                        array_append($users, $row['username']);
+                        array_push($users, $row['username']);
                     }
 
                     return $users;
