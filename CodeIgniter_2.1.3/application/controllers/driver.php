@@ -70,7 +70,7 @@ class Driver extends CI_Controller {
                 $json = json_decode($result, true);
                 $token = $json['access_token'];
                 var_dump($result);*/
-                $url = "https://foursquare.com/oauth2/access_token?client_id=Y4XZ44AUGUG031Q0A0Y0LVYIJA2IFU4XMAYZ4QGTJIOSL2I3&client_secret=4LVOFP5XYM3BBBXKLVY4OYTXZGC53ZNE41FB3F0KD0XXX0KF&grant_type=authorization_code&redirect_uri=https://students.cs.byu.edu/~kdevenis/CS462-driver/drivers/CodeIgniter_2.1.3/index.php/driver/token&code=".$code;
+                $url = "https://foursquare.com/oauth2/access_token?client_id=Y4XZ44AUGUG031Q0A0Y0LVYIJA2IFU4XMAYZ4QGTJIOSL2I3&client_secret=4LVOFP5XYM3BBBXKLVY4OYTXZGC53ZNE41FB3F0KD0XXX0KF&grant_type=authorization_code&redirect_uri=https://students.cs.byu.edu/~kdevenis/proj1/proj1/CodeIgniter_2.1.3/index.php/driver/token&code=".$code;
                 $json = file_get_contents($url);
                 $result = json_decode($json, true);
                 $token = $result['access_token'];
