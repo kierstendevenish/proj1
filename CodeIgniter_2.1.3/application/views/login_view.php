@@ -5,7 +5,7 @@
    <?php foreach ($users as $u):
                 echo "<a href='driver/checkin/".$u."'>".$u."</a><br>";
             endforeach;
-     ?>
+     ?><br>
     <h2>Login to your account:</h2><br>
    <?php echo validation_errors(); ?>
    <?php echo form_open('verifylogin'); ?>
