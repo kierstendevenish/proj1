@@ -12,7 +12,7 @@
    <?php if ($connected == false) echo "<a href='driver/foursquareAuth' target='_blank'>Connect with Foursquare</a><br>"; ?>
    <br>
    <table>
-    <th><td>Venue</td><td>Location</td><td>Created At</td></th>
+    <tr><th>Venue</th><th>Location</th><th>Created At</th></tr>
     <?php foreach ($checkins as $c):
                 echo "<tr><td>".$c['venue']."</td><td>".$c['location']."</td><td>".$c['createdAt']."</td></tr>";
             endforeach; ?>

@@ -97,7 +97,7 @@ class Home extends CI_Controller {
             $username = $session_data['username'];
             $token = $this->user->getFoursquareToken($username);
 
-            $url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=".$token;
+            $url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=".$token."&limit=10&sort=newestfirst";
             $json = file_get_contents($url);
             $result = json_decode($json, true);
             $checkins = $result['response']['checkins']['items'];
