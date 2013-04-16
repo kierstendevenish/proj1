@@ -256,9 +256,11 @@ Class User extends CI_Model
                         array_push($users, $row['username']);
                     }
 
+                    $db = null;
                     return $users;
                 }
 
+                $db = null;
                 return '';
         }
 }
