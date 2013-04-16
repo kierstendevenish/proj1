@@ -28,6 +28,9 @@ class Home extends CI_Controller {
      {
         $data['connected'] = true;
      }
+
+        $this->load->model('driver');
+        $data['checkins'] = $this->driver->getCheckins();
      
         $this->load->view('templates/header');
         $this->load->view('home_view', $data);

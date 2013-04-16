@@ -122,6 +122,25 @@ log_message("info", $username);
             $this->user->saveLocation($username, $lat, $long);
         }
 
+        function getCheckins()
+        {
+            $this->load->model('user');
+            $session_data = $this->session->userdata('logged_in');
+            $username = $session_data['username'];
+            $token = $this->user->getFoursquareToken($username);
+
+            $url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=".$token;
+            $json = file_get_contents($url);
+            $result = json_decode($json, true);
+            $checkins = $result['response']['checkins']['items'];
+
+            $checkinData = array();
+            foreach ($checkins as $c)
+            {
+                array_push($checkinData, new array('venue' => $c['venue']['name'], 'location' => $c['venue']['location']['city'].', '.$c['venue']['location']['state'], 'createdAt' => $c['createdAt']));
+            }
+        
+            return $checkinData;
 }
 
 ?>
