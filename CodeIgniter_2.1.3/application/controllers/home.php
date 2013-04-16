@@ -105,7 +105,6 @@ class Home extends CI_Controller {
             $checkinData = array();
             foreach ($checkins as $c)
             {
-                if (
                 array_push($checkinData, array('venue' => $c['venue']['name'], 'location' => $c['venue']['location']['lat'].', '.$c['venue']['location']['lng'], 'createdAt' => $c['createdAt']));
             }
 
