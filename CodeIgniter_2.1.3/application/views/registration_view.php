@@ -4,7 +4,7 @@
    <title>Delivery Driver - Register</title>
  </head>
  <body>
-   <h1>Register for an account:</h1>
+   <h1>Register for an account:</h1><br>
    <?php echo validation_errors(); ?>
    <?php echo form_open('register/save'); ?>
      <label for="username">Username:</label>

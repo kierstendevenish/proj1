@@ -3,6 +3,11 @@
  <body>
    <h2>Login to your account:</h2><br>
    <?php echo validation_errors(); ?>
+   <?php echo form_open('findUser'); ?>
+        <label for="findUsername">Find a User:</label>
+        <input type="text" size="20" id="findUsername" name="findUsername"/>
+        <br/>
+   </form><br/><br/>
    <?php echo form_open('verifylogin'); ?>
      <label for="username">Username:</label>
      <input type="text" size="20" id="username" name="username"/>

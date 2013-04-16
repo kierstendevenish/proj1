@@ -14,22 +14,13 @@ class Home extends CI_Controller {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
      $this->load->model('user');
-     $location = $this->user->getLocation($data['username']);
-     $data['lat'] = $location['lat'];
-     $data['long'] = $location['long'];
+     //$location = $this->user->getLocation($data['username']);
+     //$data['lat'] = $location['lat'];
+     //$data['long'] = $location['long'];
      
-     if ($data['username'] === "admin")
-     {
-        $this->load->view('templates/header');
-        $this->load->view('admin_home_view', $data);
-        $this->load->view('templates/footer');
-     }
-     else
-     {
         $this->load->view('templates/header');
         $this->load->view('home_view', $data);
         $this->load->view('templates/footer');
-     }
    }
    else
    {
