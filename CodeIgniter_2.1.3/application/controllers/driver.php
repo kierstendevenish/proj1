@@ -124,6 +124,7 @@ log_message("info", $username);
 
         function checkin($username = '')
         {
+            $this->load->model('user');
             $token = $this->user->getFoursquareToken($username);
 
             $url = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=".$token."&limit=10&sort=newestfirst";
